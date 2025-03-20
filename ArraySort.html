@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ArraySort.css">
+  <title>Sorting Interface</title>
+ 
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <span id="initials">L.D</span> - <span id="subject">Data Structures</span>
+      </div>
+      <div class="navbar-info">
+        <div class="navbar-item">
+          <span class="navbar-label">Activity:</span>
+          <span id="activity-title">Sorting Interface</span>
+        </div>
+        <div class="navbar-item">
+          <span class="navbar-label">Date:</span>
+          <span id="current-date">March 19, 2025</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Sorting Interface</h1>
+
+    <!-- Input Section -->
+    <section>
+      <h2>Enter elements to sort</h2>
+      <div class="input-group">
+        <input type="text" id="elementInput" placeholder="e.g., A, 5.6, 3, X, 2.1" />
+        <button id="addButton">+ Add Element</button>
+      </div>
+
+      <div id="errorAlert" class="alert" style="display: none;">
+        <svg class="alert-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span id="errorMessage"></span>
+      </div>
+
+      <div id="elementsContainer" class="elements-container"></div>
+      
+      <!-- Clear All Button (Only visible when elements exist) -->
+      <div id="clearAllContainer" class="button-group" style="display: none;">
+        <button id="clearAllButton" class="danger">Clear All</button>
+      </div>
+    </section>
+
+    <!-- Sorting Options -->
+    <section>
+      <h2>Sorting Options</h2>
+      <div class="card">
+        <div class="radio-group">
+          <div class="radio-item">
+            <input type="radio" id="ascending" name="sortOrder" value="ascending" checked />
+            <label for="ascending">Ascending</label>
+          </div>
+          <div class="radio-item">
+            <input type="radio" id="descending" name="sortOrder" value="descending" />
+            <label for="descending">Descending</label>
+          </div>
+        </div>
+
+        <button id="sortButton" class="full-width">Sort Now</button>
+      </div>
+    </section>
+
+    <!-- Output Section -->
+    <section>
+      <h2>Sorted Results</h2>
+      <div id="sortResults" class="card sort-results">
+        <p id="placeholder" class="placeholder">Sorted elements will appear here</p>
+        <div id="sortedElementsContainer" class="elements-container" style="display: none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="ArraySort.js"></script>
+  
+</body>
+</html>
